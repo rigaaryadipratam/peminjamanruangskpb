@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKPB ITS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/Logo_SKPB-biru.png" >
+    <link rel="stylesheet" href="dist/output.css">
+    <style>
+        .checkbox-group input[type="checkbox"],
+        .checkbox-group label {
+        display: none;
+        position: relative;
+        }
+      </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <!-- Header Start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10  ">
+        <div class="container">
+            <div class="flex items-center justify-between relative ">
+                <div class="px-4">
+                    <a class="navbar-brand " href="#">
+                        <img src="img/Logo_SKPB-biru.png" alt="Logo ITS" width="125"  class="d-inline-block">
+                      </a>
+                </div>
+                <div class="flex items-center px-4">
+
+                   <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden ">
+                    <span class="hamburger-line transition duration-300 ease-in-out origin-top-left "></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                    <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                   </button> 
+
+                   <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                     <ul class=" lg:flex">
+                        <li class="group">
+                           <a href="index.html #home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Beranda</a> 
+                        </li>
+                       
+                        <li class="group">
+                            <a href="index.html #rincianruangan" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Rincian Ruangan</a> 
+                         </li>
+                        
+
+                        <li class="group">
+                           <a href="https://drive.google.com/file/d/11_OqzUNwCv9FVzDQQhy0KkPmHDobn0sc/view?usp=drivesdk" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Panduan</a> 
+                        </li>
+                        <li class="group">
+                           <a href="cekstatus.html" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Cek Status</a> 
+                        </li>
+                        <li class="group">
+                            <a href="form.html" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Form peminjaman</a> 
+                         </li>                        
+                     </ul>
+                   </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Form 1 Start-->
+    <section id="form1start" class="pt-32 pb-16">
+        <div class="container">
+            <div class="w-full px-4 lg:w-1/2 lg:mx-auto">
+                <div class="w-full px-4 border border-slate-300 rounded-xl mx-auto p-5 shadow-md font-inter">
+                <div class="max-w-xl mx-auto text-center mt-6 mb-5">
+                    <h4 class="font-bold text-3xl text-dark mt-6">FORM PEMINJAMAN RUANG</h4>
+                    <h2 class="font-bold text-xl text-slate-400">Kegiatan Perkuliahan Selama Satu Semester</h2>
+                </div>
+            <form>
+                <div class="w-full px-4 mb-4">
+                    <label for="name">
+                    <span class="block font-bold mb-1 text-slate-800 after:content-['*'] after:text-pink-600 after:ml-0.5">Kode Nomor Antrian</span>
+                    <input type="text" id="name" class="w-full bg-slate-200 text-dark p-2 rounded-md  focus:outline-none  focus:ring-primary focus:ring-1 focus:border-primary" placeholder="Masukkan Nama Anda " required/>
+                </label>
+                </div>
+        
+                <div class="w-full px-4 mb-4">
+                    <label for="nrp">
+                    <span class="block font-bold mb-1 text-slate-800 after:content-['*'] after:text-pink-600 after:ml-0.5">NRP/NIP/NPP</span>
+                    <input type="text" id="nrp" class="w-full bg-slate-200 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" placeholder="Masukkan NRP/NIP/NPP" required/>
+                </label>
+                </div>
+        
+                <div class="w-full px-4 mb-4">
+                    <label for="nomorhp">
+                    <span class="block font-bold mb-1 text-slate-800 after:content-['*'] after:text-pink-600 after:ml-0.5">Nomor HP/WA</span>
+                    <input type="text" id="nomorhp" class="w-full bg-slate-200 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" placeholder="Masukkan Nomor HP/WA" required/>
+                </label> 
+                </div>
+        
+        
+                <div class="w-full px-4 mb-4 ">
+                    <label for="departemen">
+                    <span class="block font-bold mb-1 text-slate-800 after:content-['*'] after:text-pink-600 after:ml-0.5">Unit/Departemen</span>
+                    <select id="departemen" class="W-full bg-slate-200 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+                        <option value="" disabled selected hidden>Pilih Unit /Departemen</option>
+                        <option>Biro Keuangan</option>
+                        <option>Matematika</option>
+                        <option>Kimia</option>
+                        <option>Fisika</option>
+                        <option>Biologi</option>
+                        <option>Statistika</option>
+                        <option>Aktuaria</option>
+                    </select>
+                </label>
+                </div>
+                <div class="w-full px-4 mb-4">
+                    <label for="startDate" class="text-base font-bold">Tanggal mulai</label>
+                    <input type="date" id="startDate" class="w-full bg-slate-200 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>
+                </div>
+                <div class="w-full px-4 mb-4">
+                    <label for="endDate" class="text-base font-bold">Tanggal selesai</label>
+                    <input type="date" id="endDate" class="w-full bg-slate-200 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"/>
+                </div>
+                <div class="w-full px-4 mb-4">
+                    <h1>Silahkan mengupload jadwal Perkuliahan Departemen selama 1 semester</h1>
+                    <label for="file" class="text-base font-bold">Upload File</label>
+                    <input type="file" id="file" name="file" class="w-full bg-slate-200 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary mb-2">
+                </div>
+                <!--Sesi-->
+                <section class=" pt-3 pb-2 bg-inherit">
+                    <div class="container">
+                        <h2 class="font-bold mb-3 md:text-xl lg:text-lg ">Sesi</h2>
+                        <div class="flex flex-wrap mx-auto">
+
+                            <div class=" px-3 mb-2  text-dark font-medium w-1/2 md:w-1/4 xl:w-1/2">
+
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="sesi-1" class="mr-2">
+                                        <label for="sesi-1">Sesi 1 (07.00-08.50)</label>
+                                </div>
+
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="sesi-2" class="mr-2">
+                                        <label for="sesi-2">Sesi 2 (09.00-10.50)</label>
+                                </div>
+
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="sesi-3" class="mr-2">
+                                        <label for="sesi-3">Sesi 3 (11.00-12.50)</label>
+                                </div>
+                            </div>
+                            <div class=" px-3 mb-2  text-dark font-medium w-1/2 md:w-1/4 xl:w-1/2">
+
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="sesi-4" class="mr-2">
+                                        <label for="sesi-4">Sesi 4 (13.30-15.20)</label>
+                                </div>
+
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="sesi-5" class="mr-2">
+                                        <label for="sesi-5">Sesi 5 (15.30-17.20)</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="sesi-6" class="mr-2">
+                                        <label for="sesi-6">Sesi 6 (>18.00)</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+                
+                
+                <div class="w-full px-4 mb-4 ">
+                    <label for="gedung" class="text-base font-bold  ">Pilih Ruang</label> <br>
+                    <select id="gedung" class="text-base font-semibold p-2 bg-slate-200 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary " >
+                        <option value="" disabled selected hidden>Pilih Ruang</option>
+                        <option value="tower1">Tower 1</option>
+                        <option value="tower2">Tower 2</option>
+                        <option value="teater">Teater</option>
+                        <option value="perpus">Perpustakaan</option>
+                    </select>
+                </div>
+
+               <section class=" pt-3 pb-2 bg-inherit">
+                <div class="container">
+                    
+                    <h2 class="font-bold mb-4 md:text-xl lg:text-lg ">Checklist Ruangan</h2>
+                    <div class="flex flex-wrap mx-auto">
+                        
+                        
+                            <!-- check box 1 -->
+                            <div class="checkbox-group px-2 mb-2 text-dark font-medium  w-1/3" id="tower1aCheckboxes" >
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-201" class="mr-2">
+                                        <label for="TW1-201">TW1-201</label>
+                                </div>
+
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-202" class="mr-2">
+                                        <label for="TW1-202">TW1-202</label>
+                                </div>
+
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-203" class="mr-2">
+                                        <label for="TW1-203">TW1-203</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-204" class="mr-2">
+                                        <label for="TW1-204">TW1-204</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-205" class="mr-2">
+                                        <label for="TW1-205">TW1-205</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-206" class="mr-2">
+                                        <label for="TW1-206">TW1-206</label>
+                                </div>
+                                
+                            </div>
+
+                        <!-- check box 2 -->
+                            <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="tower1bCheckboxes">
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-301" class="mr-2">
+                                        <label for="TW1-301">TW1-301</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-302" class="mr-2">
+                                        <label for="TW1-302">TW1-302</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-303" class="mr-2">
+                                        <label for="TW1-303">TW1-303</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-304" class="mr-2">
+                                        <label for="TW1-304">TW1-304</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-305" class="mr-2">
+                                        <label for="TW1-305">TW1-305</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-306" class="mr-2">
+                                        <label for="TW1-306">TW1-306</label>
+                                
+                                
+                                </div>
+                            </div>
+
+                        <!-- check box 3 -->
+                            <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="tower1cCheckboxes">
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-501" class="mr-2">
+                                        <label for="TW1-501">TW1-501</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-502" class="mr-2">
+                                        <label for="TW1-502">TW1-502</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-503" class="mr-2">
+                                        <label for="TW1-503">TW1-503</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-504" class="mr-2">
+                                        <label for="TW1-504">TW1-504</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-505" class="mr-2">
+                                        <label for="TW1-505">TW1-505</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-506" class="mr-2">
+                                        <label for="TW1-506">TW1-506</label>
+                                </div>
+                            </div>
+
+                        <!-- check box 4 -->
+                            <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="tower1dCheckboxes">
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-601" class="mr-2">
+                                        <label for="TW1-601">TW1-601</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-602" class="mr-2">
+                                        <label for="TW1-602">TW1-602</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-603" class="mr-2">
+                                        <label for="TW1-603">TW1-603</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-604" class="mr-2">
+                                        <label for="TW1-604">TW1-604</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-605" class="mr-2">
+                                        <label for="TW1-605">TW1-605</label>
+                                </div>   
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-606" class="mr-2">
+                                        <label for="TW1-606">TW1-606</label>
+                                </div>
+                            </div>
+
+                        <!-- check box 5 -->
+                            <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="tower1eCheckboxes">
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-701" class="mr-2">
+                                        <label for="TW1-601">TW1-701</label>
+                                </div>
+                            
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-702" class="mr-2">
+                                        <label for="TW1-702">TW1-702</label>
+                                </div>
+                            
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-703" class="mr-2">
+                                        <label for="TW1-703">TW1-703</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-704" class="mr-2">
+                                        <label for="TW1-704">TW1-704</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-705" class="mr-2">
+                                        <label for="TW1-705">TW1-705</label>
+                                </div> 
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-706" class="mr-2">
+                                        <label for="TW1-706">TW1-706</label>
+                                </div>
+                            </div>
+
+                         <!-- check box 6 -->
+                            <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="tower1fCheckboxes">
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-801" class="mr-2">
+                                        <label for="TW1-801">TW1-801</label>
+                                </div>
+                            
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-802" class="mr-2">
+                                        <label for="TW1-802">TW1-802</label>
+                                </div>
+                            
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-803" class="mr-2">
+                                        <label for="TW1-803">TW1-803</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-804" class="mr-2">
+                                        <label for="TW1-804">TW1-804</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-805" class="mr-2">
+                                        <label for="TW1-805">TW1-805</label>
+                                </div>
+                                <div class=" flex flex-wrap mb-3">
+                                    <input type="checkbox" id="TW1-806" class="mr-2">
+                                        <label for="TW1-806">TW1-806</label>
+                                </div>
+                            </div>
+
+
+                        <!-- check box 7 -->
+                        <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="tower2Checkboxes">
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="TW2-401" class="mr-2">
+                                    <label for="TW2-401">TW2-401</label>
+                            </div>
+                        
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="TW2-402" class="mr-2">
+                                    <label for="TW2-402">TW2-402</label>
+                            </div>
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="TW2-403" class="mr-2">
+                                    <label for="TW2-403">TW2-403</label>
+                            </div>
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="TW2-404" class="mr-2">
+                                    <label for="TW2-404">TW2-404</label>
+                            </div>
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="TW2-405" class="mr-2">
+                                    <label for="TW2-405">TW2-405</label>
+                            </div>
+                        </div>
+
+
+                        <!-- check box 8 -->
+                        <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="teaterCheckboxes">
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="teaterA" class="mr-2">
+                                    <label for="teaterA">Teater A</label>
+                            </div>
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="teaterB" class="mr-2">
+                                    <label for="teaterB">Teater B</label>
+                            </div>
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="teaterC" class="mr-2">
+                                    <label for="teaterC">Teater C</label>
+                            </div>
+                        </div>
+
+
+                        <!-- check box 9 -->
+                        <div class="checkbox-group px-2 mb-2 text-dark font-medium w-1/3" id="perpusCheckboxes">
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="perpus-604" class="mr-2">
+                                    <label for="perpus-604">Perpustakaan 604</label>
+                            </div>
+                        
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="perpus-605" class="mr-2">
+                                    <label for="perpus-605">Perpustakaan 605</label>
+                            </div>
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="perpus-606" class="mr-2">
+                                    <label for="perpus-606">Perpustakaan 606</label>
+                            </div>
+                            
+                            <div class=" flex flex-wrap mb-3">
+                                <input type="checkbox" id="perpus-608" class="mr-2">
+                                    <label for="perpus-608">Perpustakaan 608</label>
+                            </div>
+                        </div>
+
+
+
+
+
+                       
+
+
+                    </div>
+               
+                </div>
+            </section>
+            <!--Checkbox End-->
+                    <div class="w-full px-4 mb-10 flex justify-between">
+                        <a href="form.html" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Kembali</a>
+                    
+                        <a href="formupload1.html" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Selanjutnya</a>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--Form 1 end-->
+
+     <!-- Footer Start -->
+     <footer class="bg-dark pt-24 pb-24">
+        <div class="container ">
+            <div class="flex flex-wrap ">
+                <div class="w-full px-4 mb-12  text-slate-300 font-medium md:w-1/3">
+                    <img src="img/Logo_SKPB-putih2.png" alt="logoskpbputih" width="150"  class="mb-3">
+                   
+                    <p class=" text-base text-white ">Gedung Sains FMIPA Lt.1</p>
+                    <p class=" text-base text-white "> Jl. Teknik Mesin No.173, Keputih, </p>
+                    <p class=" text-base text-white mb-3 ">Sukolilo, Surabaya, Jawa Timur</p>
+                    <a href=" tu_skpb@its.ac.id" class=" inline-block text-base hover:text-primary "> Email : tu_skpb@its.ac.id</a>
+                </div>
+                <div class="w-full px-4 pt-2 mb-12  md:w-1/3">
+                    <h2 class="font-semibold text-xl text-white mb-5">Call Center SKPB ITS</h2>
+                    
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Telepon  :   (031) 5994255</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">CP1      :   Sunawi (0812 3268 0979)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">CP2      :   Asti (081 35711 3309)</a>
+                        </li>
+                    </ul>
+                
+                
+                </div>
+
+                <div class="w-full px-4 pt-2  mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="#rincianruangan" class="inline-block text-base hover:text-primary mb-3">Rincian Ruangan</a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/11_OqzUNwCv9FVzDQQhy0KkPmHDobn0sc/view?usp=drivesdk" class="inline-block text-base hover:text-primary mb-3">Panduan</a>
+                        </li>
+                        <li>
+                            <a href="#cekstatus" class="inline-block text-base hover:text-primary mb-3">Cek Status</a>
+                        </li>
+                        <li>
+                            <a href='form.html' class="inline-block text-base hover:text-primary mb-3">Form Peminjaman</a>
+                        </li>
+                    </ul>
+                
+                
+                </div>
+            </div>
+
+        <div class="w-full pt-10 border-t border-slate-700">
+            <div class="flex items-center justify-center mb-5">
+                <!-- Youtube -->
+                <a href="https://youtobe.com"
+                target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border 
+                border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com"
+                target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border 
+                border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                </a>
+
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/"
+                target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border 
+                border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                <svg role="img" width="20" class="fill-current"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                </a>
+                </div>
+
+            
+            <p class="font-medium text-[0.75rem] text-slate-500 text-center">Copyright &copy; 2024 SKPB ITS</p>
+        </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    
+    
+    <script src="dist/js/script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        var startDateInput = document.getElementById("startDate");
+        var endDateInput = document.getElementById("endDate");
+    
+        startDateInput.addEventListener("change", function() {
+          endDateInput.min = startDateInput.value;
+        });
+        endDateInput.addEventListener("change", function() {
+            startDateInput.max = endDateInput.value;
+        });
+    </script>
+    <script>
+        // Mendengarkan perubahan pada dropdown ruangan
+        document.getElementById("gedung").addEventListener("change", function() {
+          // Mendapatkan nilai terpilih dari dropdown
+          var selectedRuang = this.value;
+      
+          // Sembunyikan semua checkbox di semua grup
+          hideAllCheckboxes();
+      
+          // Tampilkan checkbox sesuai dengan nilai dropdown yang dipilih
+          if (selectedRuang === "tower1") {
+            showCheckboxes(["tower1aCheckboxes", "tower1bCheckboxes", "tower1cCheckboxes", "tower1dCheckboxes", "tower1eCheckboxes", "tower1fCheckboxes"]);
+          } else if (selectedRuang === "tower2") {
+            showCheckboxes(["tower2Checkboxes"]);
+          } else if (selectedRuang === "perpus") {
+            showCheckboxes(["perpusCheckboxes"]);
+          } else if (selectedRuang === "teater") {
+            showCheckboxes(["teaterCheckboxes"]);
+          }
+        });
+      
+        // Fungsi untuk menyembunyikan semua checkbox dan label
+        function hideAllCheckboxes() {
+          var checkboxesAndLabels = document.querySelectorAll('.checkbox-group input[type="checkbox"], .checkbox-group label');
+          checkboxesAndLabels.forEach(function(element) {
+            element.style.display = "none";
+          });
+        }
+      
+        // Fungsi untuk menampilkan checkbox dan label pada suatu grup
+        function showCheckboxes(groupIds) {
+          groupIds.forEach(function(groupId) {
+            var checkboxesAndLabels = document.getElementById(groupId).querySelectorAll('input[type="checkbox"], label');
+            checkboxesAndLabels.forEach(function(element) {
+              element.style.display = "block";
+              element.style.position = "relative";
+            });
+          });
+        }
+      </script>   
+</body>
+</html>
